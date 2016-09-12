@@ -72,6 +72,20 @@ import org.apache.cassandra.utils.*;
  * service, which defines not only a way to activate and deactivate it, but also
  * hooks into its lifecycle methods (see {@link #setup()}, {@link #start()},
  * {@link #stop()} and {@link #setup()}).
+ *
+ * For run locally, some VM Options should be write:
+ *      -Dcassandra-foreground=yes
+ *      -Dcassandra.config=file:///data/apps/kenshinn/cassandra/conf/cassandra.yaml
+ *      -Dcassandra.storagedir=/data/apps/stuy/data/cassandra
+ *      -Dlogback.configurationFile=file:///data/apps/kenshinn/cassandra/conf/logback.xml
+ *      -Dcassandra.logdir=/data/apps/stuy/logs/cassandra
+ *      -Dcom.sun.management.jmxremote
+ *      -Dcom.sun.management.jmxremote.port=7199
+ *      -Dcom.sun.management.jmxremote.local.only=false
+ *      -Dcom.sun.management.jmxremote.authenticate=false
+ *      -Dcom.sun.management.jmxremote.ssl=false
+ *      -ea
+ *      -Xmx1G
  */
 public class CassandraDaemon
 {

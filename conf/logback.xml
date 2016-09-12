@@ -42,7 +42,7 @@ appender reference in the root level section below.
       <maxFileSize>20MB</maxFileSize>
     </triggeringPolicy>
     <encoder>
-      <pattern>%-5level [%thread] %date{ISO8601} %F:%L - %msg%n</pattern>
+      <pattern>%-5level [%thread] %date{ISO8601} %F:%L - %logger - %msg%n</pattern>
     </encoder>
   </appender>
 
@@ -59,7 +59,7 @@ appender reference in the root level section below.
       <maxFileSize>20MB</maxFileSize>
     </triggeringPolicy>
     <encoder>
-      <pattern>%-5level [%thread] %date{ISO8601} %F:%L - %msg%n</pattern>
+      <pattern>%-5level [%thread] %date{ISO8601} %F:%L - %logger - %msg%n</pattern>
     </encoder>
   </appender>
 
@@ -79,7 +79,7 @@ appender reference in the root level section below.
       <level>INFO</level>
     </filter>
     <encoder>
-      <pattern>%-5level %date{HH:mm:ss,SSS} %msg%n</pattern>
+      <pattern>%-5level %date{HH:mm:ss,SSS} %logger %msg%n</pattern>
     </encoder>
   </appender>
 
@@ -87,7 +87,7 @@ appender reference in the root level section below.
   <appender name="LogbackMetrics" class="com.codahale.metrics.logback.InstrumentedAppender" />
    -->
 
-  <root level="INFO">
+  <root level="TRACE">
     <appender-ref ref="SYSTEMLOG" />
     <appender-ref ref="STDOUT" />
     <appender-ref ref="ASYNCDEBUGLOG" /> <!-- Comment this line to disable debug.log -->
@@ -96,6 +96,6 @@ appender reference in the root level section below.
     -->
   </root>
 
-  <logger name="org.apache.cassandra" level="DEBUG"/>
-  <logger name="com.thinkaurelius.thrift" level="ERROR"/>
+  <logger name="org.apache.cassandra" level="TRACE"/>
+  <logger name="com.thinkaurelius.thrift" level="TRACE"/>
 </configuration>
