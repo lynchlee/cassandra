@@ -34,7 +34,7 @@ appender reference in the root level section below.
     </filter>
     <file>${cassandra.logdir}/system.log</file>
     <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-      <fileNamePattern>${cassandra.logdir}/system.log.%i.zip</fileNamePattern>
+      <fileNamePattern>/data/apps/apache/logs/cassandra/system.log.%i.zip</fileNamePattern>
       <minIndex>1</minIndex>
       <maxIndex>20</maxIndex>
     </rollingPolicy>
@@ -51,7 +51,7 @@ appender reference in the root level section below.
   <appender name="DEBUGLOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <file>${cassandra.logdir}/debug.log</file>
     <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-      <fileNamePattern>${cassandra.logdir}/debug.log.%i.zip</fileNamePattern>
+      <fileNamePattern>/data/apps/apache/logs/cassandra/debug.log.%i.zip</fileNamePattern>
       <minIndex>1</minIndex>
       <maxIndex>20</maxIndex>
     </rollingPolicy>
