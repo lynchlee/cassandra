@@ -1,0 +1,10 @@
+<configuration>
+    <property>
+        <name>cassandra.output.partitioner.class</name>
+        <value>org.apache.cassandra.dht.Murmur3Partitioner</value>
+    </property>
+    <property>
+        <name>cassandra.output.thrift.address</name>
+        <value>172.17.18.171</value>
+    </property>
+</configuration>
